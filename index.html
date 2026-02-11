@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Music Control -->
+    <div class="music-control">
+        <button id="music-btn">🎵 Play Music</button>
+        <audio id="bg-music" loop>
+            <source src="assets/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider"></div>
+        </label>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-bar">
+            <div class="scroll-heart">❤️</div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hearts-container"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Happy Birthday, <span class="highlight-name">Akanksha</span> 💖</h1>
+            <!-- Countdown removed as per request -->
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="arrow">↓</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- "Us" Photo Section -->
+    <section id="us-section">
+        <div class="section-title gs-reveal">Us</div>
+        <div class="photos-container">
+            <div class="photo-frame left gs-slide-left">
+                <img src="assets/user.jpeg" alt="Me">
+            </div>
+            <div class="heart-connector gs-pop">❤️</div>
+            <div class="photo-frame right gs-slide-right">
+                <img src="assets/her.jpeg" alt="You">
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="message-section">
+        <div class="message-container">
+            <p class="fade-in-text">On this special day...</p>
+            <p class="fade-in-text">I just want to tell you...</p>
+            <p class="fade-in-text">How much you mean to me.</p>
+            <p class="fade-in-text">You are the most beautiful part of my life.</p>
+        </div>
+    </section>
+
+    <!-- Memory Timeline -->
+    <section id="timeline-section">
+        <h2 class="section-title">Our Journey</h2>
+        <div class="timeline">
+            <!-- 2022 -->
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <img src="assets/timeline_01.jpeg" alt="First Birthday">
+                    <h3>First Birthday Together</h3>
+                    <p>Celebrating your special day with you for the first time.</p>
+                    <span class="date">Feb 12, 2022</span>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <img src="assets/timeline_02.jpeg" alt="Second Photo">
+                    <h3>Second Photo</h3>
+                    <p>Capturing another beautiful memory together.</p>
+                    <span class="date">Dec 03, 2022</span>
+                </div>
+            </div>
+
+            <!-- 2023 -->
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <img src="assets/timeline_03.jpeg" alt="First Rain">
+                    <h3>First Rain</h3>
+                    <p>Enjoying the monsoon magic together.</p>
+                    <span class="date">Sept 22, 2023</span>
+                </div>
+            </div>
+
+            <!-- 2024 -->
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <img src="assets/timeline_04.jpeg" alt="Phoenix Mall">
+                    <h3>Phoenix Mall Surprise</h3>
+                    <p>A surprise meeting just for you.</p>
+                    <span class="date">Jan 21, 2024</span>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <img src="assets/timeline_05.jpeg" alt="Saree Moment">
+                    <h3>Saree Moment</h3>
+                    <p>Your first photo in a saree with me. Stunning.</p>
+                    <span class="date">Feb 24, 2024</span>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <img src="assets/timeline_06.jpeg" alt="Marine Drive">
+                    <h3>Marine Drive & Shopping</h3>
+                    <p>First time shopping and feeling the breeze at Marine Drive.</p>
+                    <span class="date">Feb 25, 2024</span>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <img src="assets/timeline_07.jpeg" alt="Nashik Date">
+                    <h3>Nashik Date</h3>
+                    <p>Our first official date in Nashik.</p>
+                    <span class="date">May 10, 2024</span>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <img src="assets/timeline_08.jpeg" alt="In My Arms">
+                    <h3>In My Arms</h3>
+                    <p>Holding you close for the first time.</p>
+                    <span class="date">Sept 28, 2024</span>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <img src="assets/timeline_09.jpeg" alt="My Birthday">
+                    <h3>My Birthday Surprise</h3>
+                    <p>Your beautiful surprise for me.</p>
+                    <span class="date">Dec 15, 2024</span>
+                </div>
+            </div>
+
+            <!-- 2025 -->
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <img src="assets/timeline_10.jpeg" alt="Vivah Movie">
+                    <h3>Vivah & Vasai</h3>
+                    <p>Surprising you into my cushion while watching Vivah.</p>
+                    <span class="date">Jan 11, 2025</span>
+                </div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <img src="assets/timeline_12.jpeg" alt="Diwali">
+                    <h3>Diwali Wishes</h3>
+                    <p>First time wishing Diwali face-to-face (Aamne Samne).</p>
+                    <span class="date">Oct 21, 2025</span>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <img src="assets/timeline_13.jpeg" alt="Secret Meet">
+                    <h3>Secret Meet</h3>
+                    <p>Our secret meeting at Godavari.</p>
+                    <span class="date">Oct 22, 2025</span>
+                </div>
+            </div>
+
+            <!-- 2026 -->
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <img src="assets/timeline_11.jpeg" alt="Train Surprise">
+                    <h3>Train Surprise</h3>
+                    <p>Your surprise to me on the train.</p>
+                    <span class="date">Jan 13, 2026</span>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <img src="assets/timeline_14.jpeg" alt="First Wedding">
+                    <h3>First Wedding</h3>
+                    <p>Attending our first wedding function together.</p>
+                    <span class="date">Feb 06, 2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poem Box Surprise -->
+    <section id="poem-section">
+        <h2 class="section-title">A Little Surprise...</h2>
+        <div class="gift-box-container">
+            <div class="gift-box" id="gift-box">
+                <div class="lid"></div>
+                <div class="box-body"></div>
+            </div>
+        </div>
+        <!-- Moved outside gift-box-container to fix layout overlap -->
+        <div class="poem-content hidden" id="poem-content">
+            <div class="parchment">
+                <div class="poem-wrapper">
+                    <button class="nav-btn prev" onclick="changePoem(-1)">❮</button>
+                    <div class="poems-container">
+                        <div class="poem active">
+                            <h3>My Poem for You</h3>
+                            <p>
+                                Roses are red,<br>
+                                Violets are blue,<br>
+                                My world is brighter,<br>
+                                Because of you.
+                            </p>
+                        </div>
+                        <div class="poem">
+                            <h3>Your Smile</h3>
+                            <p>
+                                A curved line that sets everything straight,<br>
+                                My shelter, my home, my beautiful fate.<br>
+                                When you smile, the world feels right,<br>
+                                You are my morning and my starry night.
+                            </p>
+                        </div>
+                        <div class="poem">
+                            <h3>In Your Eyes</h3>
+                            <p>
+                                I see a future, bright and clear,<br>
+                                A love that banishes every fear.<br>
+                                Deep as the ocean, vast as the sky,<br>
+                                You are the apple of my eye.
+                            </p>
+                        </div>
+                        <div class="poem">
+                            <h3>My Promise</h3>
+                            <p>
+                                To hold your hand through every storm,<br>
+                                To keep you safe, to keep you warm.<br>
+                                I promise to love you, come what may,<br>
+                                More and more with every single day.
+                            </p>
+                        </div>
+                        <div class="poem">
+                            <h3>Simply You</h3>
+                            <p>
+                                No words can capture all you are,<br>
+                                My guiding light, my northern star.<br>
+                                I love you more than words can say,<br>
+                                Happy Birthday, my love, today and always.
+                            </p>
+                        </div>
+                    </div>
+                    <button class="nav-btn next" onclick="changePoem(1)">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Love Section -->
+    <section id="love-cards-section">
+        <h2 class="section-title">My Heartbeats for You</h2>
+        <div class="cards-grid">
+            <div class="love-card">
+                <div class="card-front">Your Voice</div>
+                <div class="card-back">Your voice is my reason for calmness. It heals my soul.</div>
+            </div>
+            <div class="love-card">
+                <div class="card-front">Your Presence</div>
+                <div class="card-back">Your presence leads to my feeling of having everything in life.</div>
+            </div>
+            <div class="love-card">
+                <div class="card-front">My Inspiration</div>
+                <div class="card-back">You make me a better person every single day.</div>
+            </div>
+            <div class="love-card">
+                <div class="card-front">My Favorite Melody</div>
+                <div class="card-back">Your laugh is the sweetest song I've ever heard.</div>
+            </div>
+            <div class="love-card">
+                <div class="card-front">My Biggest Fan</div>
+                <div class="card-back">You believe in my dreams even when I doubt myself.</div>
+            </div>
+            <div class="love-card">
+                <div class="card-front">Purest Soul</div>
+                <div class="card-back">Your kindness and love have no boundaries.</div>
+            </div>
+            <div class="love-card">
+                <div class="card-front">My Sweetheart</div>
+                <div class="card-back">You are the sweetest part of my life.</div>
+            </div>
+            <div class="love-card">
+                <div class="card-front">My Cutiepie</div>
+                <div class="card-back">Your cuteness just melts my heart every time!</div>
+            </div>
+            <div class="love-card">
+                <div class="card-front">Tap Me 💓</div>
+                <div class="card-back">You are my everything my aku baby!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Make a Wish Section -->
+    <section id="wish-section">
+        <h2 class="section-title">Make a Wish</h2>
+        <p class="instruction">Close your eyes and tap the candle!</p>
+        <div class="candle-container" id="candle-container">
+            <div class="candle">
+                <div class="flame" id="flame"></div>
+                <div class="wick"></div>
+                <div class="wax"></div>
+            </div>
+        </div>
+        <h2 id="wish-message" class="hidden">May all your dreams come true my love! ✨</h2>
+    </section>
+
+    <!-- Final Emotional Section -->
+    <section class="final-message">
+        <h1>Forever With You 💍</h1>
+        <p>No matter what life brings, I choose you. Every single time.</p>
+    </section>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
